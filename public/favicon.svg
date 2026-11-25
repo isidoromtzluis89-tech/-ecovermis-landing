@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ecovermis">
+  <rect width="64" height="64" rx="14" fill="#0F1C14"/>
+  <path d="M32 12c-2 10-10 16-16 20 8 2 14 8 16 20 2-12 8-18 16-20-6-4-14-10-16-20z" fill="#82C34C"/>
+  <circle cx="32" cy="34" r="4" fill="#83B372"/>
+</svg>

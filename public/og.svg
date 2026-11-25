@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="og.svg guía → exportar og.png">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1C14"/>
+      <stop offset="100%" stop-color="#435938"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="100" y="52" width="1000" height="525" rx="24" fill="none" stroke="#F5F7F4" stroke-opacity="0.25" stroke-width="2"/>
+  <text x="50%" y="46%" text-anchor="middle" fill="#F5F7F4" font-family="Montserrat, system-ui, sans-serif" font-size="42" font-weight="700" opacity="0.9">og.svg guía → exportar og.png</text>
+  <text x="50%" y="56%" text-anchor="middle" fill="#C5D1C0" font-family="Dosis, system-ui, sans-serif" font-size="30">1200×630</text>
+</svg>

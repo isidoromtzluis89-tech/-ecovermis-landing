@@ -1,0 +1,40 @@
+---
+import { beneficios } from '../content';
+---
+
+<section class="section-pad relative overflow-hidden" aria-labelledby="beneficios-title">
+  <div
+    class="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-eco-secondary/10 blur-3xl"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="container-narrow">
+    <p id="beneficios-title" class="mb-14 max-w-2xl text-xl leading-relaxed text-eco-text sm:text-2xl">
+      {beneficios.intro}
+    </p>
+    <ul class="grid gap-12 md:grid-cols-3 md:gap-8">
+      {
+        beneficios.items.map((item, i) => (
+          <li class="group">
+            <div class="mb-5 overflow-hidden rounded-2xl">
+              <img
+                src={item.image.src}
+                alt={item.image.alt}
+                width="800"
+                height="600"
+                class="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:h-56"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p class="mb-2 font-display text-sm font-bold uppercase tracking-widest text-eco-secondary">
+              {String(i + 1).padStart(2, '0')}
+            </p>
+            <h3 class="heading-display mb-3 text-xl sm:text-2xl">{item.title}</h3>
+            <p class="leading-relaxed text-muted">{item.body}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

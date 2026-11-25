@@ -1,0 +1,80 @@
+---
+import { hero, site } from '../content';
+import WhatsAppButton from './WhatsAppButton.astro';
+---
+
+<header class="relative min-h-[100svh] overflow-hidden">
+  <div class="absolute inset-0 eco-texture" aria-hidden="true"></div>
+  <img
+    src={hero.image.src}
+    alt={hero.image.alt}
+    width="1792"
+    height="1008"
+    class="absolute inset-0 h-full w-full object-cover object-right"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+  />
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-eco-bg via-eco-bg/85 to-eco-bg/25"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-eco-bg via-transparent to-eco-bg/50"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute -right-10 top-1/4 h-72 w-72 rounded-full bg-eco-accent/15 blur-3xl"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative container-narrow flex min-h-[100svh] flex-col justify-end section-pad pb-20 pt-10 sm:justify-center sm:pb-24">
+    <a href="#contenido" class="mb-8 inline-flex w-fit items-center gap-3 animate-[fadeUp_0.7s_ease-out_both]">
+      <img
+        src={site.logo.src}
+        alt={site.logo.alt}
+        width="120"
+        height="138"
+        class="h-16 w-auto sm:h-20 drop-shadow-[0_4px_24px_rgba(143,212,85,0.25)]"
+        loading="eager"
+        decoding="async"
+      />
+      <span class="sr-only">{site.name}</span>
+    </a>
+    <p
+      class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-eco-glow animate-[fadeUp_0.7s_ease-out_0.08s_both]"
+      aria-hidden="true"
+    >
+      {site.name}
+    </p>
+    <h1
+      class="heading-display mb-6 max-w-3xl text-3xl leading-tight sm:text-4xl md:text-5xl animate-[fadeUp_0.7s_ease-out_0.12s_both]"
+    >
+      {hero.headline}
+    </h1>
+    <p
+      class="mb-10 max-w-xl text-lg leading-relaxed text-muted sm:text-xl animate-[fadeUp_0.7s_ease-out_0.22s_both]"
+    >
+      {hero.subheadline}
+    </p>
+    <div class="animate-[fadeUp_0.7s_ease-out_0.32s_both]">
+      <WhatsAppButton />
+    </div>
+  </div>
+</header>
+
+<style>
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

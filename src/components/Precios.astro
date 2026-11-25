@@ -1,0 +1,94 @@
+---
+import { precios } from '../content';
+import WhatsAppButton from './WhatsAppButton.astro';
+---
+
+<section class="section-pad" aria-labelledby="precios-title" id="precios">
+  <div class="container-narrow">
+    <h2 id="precios-title" class="heading-display mb-12 text-3xl sm:text-4xl">
+      {precios.title}
+    </h2>
+
+    <div class="mb-14 grid gap-10 lg:grid-cols-2">
+      <!-- Listo para usar -->
+      <div>
+        <h3 class="mb-6 font-display text-xl font-bold text-eco-secondary">
+          {precios.listo.title}
+        </h3>
+        {
+          precios.listo.items.map((item) => (
+            <article class="surface-card overflow-hidden">
+              <img
+                src={item.image.src}
+                alt={item.image.alt}
+                width="800"
+                height="800"
+                class="aspect-square w-full object-cover sm:aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="flex items-baseline justify-between gap-4 p-6">
+                <h4 class="font-display text-lg font-bold">{item.name}</h4>
+                <p class="shrink-0 font-display text-xl font-extrabold text-eco-accent">{item.price}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+
+      <!-- Concentrado -->
+      <div>
+        <h3 class="mb-2 font-display text-xl font-bold text-eco-secondary">
+          {precios.concentrado.title}
+        </h3>
+        <p class="mb-6 text-sm text-muted">{precios.concentrado.note}</p>
+        <div class="surface-card overflow-hidden">
+          <div class="grid sm:grid-cols-2">
+            <img
+              src={precios.concentrado.image.src}
+              alt={precios.concentrado.image.alt}
+              width="1408"
+              height="1408"
+              class="aspect-square w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={precios.concentrado.bottleImage.src}
+              alt={precios.concentrado.bottleImage.alt}
+              width="832"
+              height="1248"
+              class="hidden aspect-square w-full object-cover object-top sm:block"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <ul class="divide-y divide-eco-secondary/15">
+            {
+              precios.concentrado.items.map((item) => (
+                <li class="flex items-baseline justify-between gap-4 px-6 py-4">
+                  <span class="font-display font-semibold">{item.name}</span>
+                  <span class="font-display text-lg font-extrabold text-eco-accent">{item.price}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taller -->
+    <div class="mb-12 max-w-2xl">
+      <h3 class="mb-3 font-display text-xl font-bold text-eco-secondary">
+        {precios.taller.title}
+      </h3>
+      <p class="mb-3 text-lg leading-relaxed text-muted">{precios.taller.body}</p>
+      <p class="text-muted">{precios.taller.note}</p>
+    </div>
+
+    <div class="border-t border-eco-secondary/20 pt-10">
+      <p class="mb-6 max-w-xl text-lg text-muted">{precios.midCtaNote}</p>
+      <WhatsAppButton />
+    </div>
+  </div>
+</section>

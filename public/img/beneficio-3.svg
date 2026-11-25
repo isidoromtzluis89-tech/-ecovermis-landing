@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="beneficio-3 — aplicación">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C2E22"/>
+      <stop offset="100%" stop-color="#83B372"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect x="66" y="50" width="666" height="500" rx="24" fill="none" stroke="#F5F7F4" stroke-opacity="0.25" stroke-width="2"/>
+  <text x="50%" y="46%" text-anchor="middle" fill="#F5F7F4" font-family="Montserrat, system-ui, sans-serif" font-size="28" font-weight="700" opacity="0.9">beneficio-3 — aplicación</text>
+  <text x="50%" y="56%" text-anchor="middle" fill="#C5D1C0" font-family="Dosis, system-ui, sans-serif" font-size="20">800×600</text>
+</svg>

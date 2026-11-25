@@ -1,0 +1,26 @@
+---
+import { ctaFinal } from '../content';
+import WhatsAppButton from './WhatsAppButton.astro';
+---
+
+<section
+  class="section-pad relative overflow-hidden"
+  aria-labelledby="cta-final-title"
+  id="contacto"
+>
+  <div
+    class="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style="background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(130,195,76,0.15), transparent 70%);"
+  >
+  </div>
+  <div class="relative container-narrow max-w-2xl text-center">
+    <h2 id="cta-final-title" class="heading-display mb-6 text-3xl sm:text-4xl md:text-5xl">
+      {ctaFinal.title}
+    </h2>
+    <p class="mb-10 text-lg leading-relaxed text-muted sm:text-xl">
+      {ctaFinal.body}
+    </p>
+    <WhatsAppButton class="mx-auto" />
+  </div>
+</section>

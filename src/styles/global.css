@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-eco-bg font-body text-eco-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-eco-accent/45 text-eco-text;
+  }
+}
+
+@layer components {
+  .section-pad {
+    @apply px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .heading-display {
+    @apply font-display font-extrabold tracking-tight text-eco-text;
+  }
+
+  .text-muted {
+    @apply text-eco-muted;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-eco-accent px-6 py-3.5 font-display text-base font-bold text-eco-ink shadow-glow transition duration-300 hover:brightness-110 hover:shadow-lift focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-eco-accent;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-eco-secondary/30 bg-eco-elevated/90 shadow-soft backdrop-blur-sm;
+  }
+
+  .eco-texture {
+    background-image:
+      radial-gradient(ellipse 70% 50% at 80% 0%, rgba(158, 212, 132, 0.28), transparent 55%),
+      radial-gradient(ellipse 50% 40% at 0% 100%, rgba(85, 123, 69, 0.45), transparent 50%),
+      linear-gradient(180deg, #1a2f20 0%, #243d2a 100%);
+  }
+}

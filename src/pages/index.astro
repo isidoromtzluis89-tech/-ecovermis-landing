@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ScrollExpandMedia from '../components/react/ScrollExpandMedia';
+import Problema from '../components/Problema.astro';
+import Beneficios from '../components/Beneficios.astro';
+import Pasos from '../components/Pasos.astro';
+import Precios from '../components/Precios.astro';
+import FAQ from '../components/FAQ.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import { cta, hero, site, whatsappHref } from '../content';
+---
+
+<BaseLayout>
+  <main id="contenido">
+    <ScrollExpandMedia
+      client:load
+      mediaType="image"
+      mediaSrc={hero.media.src}
+      mediaAlt={hero.media.alt}
+      bgImageSrc={hero.image.src}
+      bgImageAlt={hero.image.alt}
+      title={hero.headline}
+      date={site.tagline}
+      scrollToExpand={hero.scrollHint}
+      subheadline={hero.subheadline}
+      logoSrc={site.logo.src}
+      logoAlt={site.logo.alt}
+      ctaHref={whatsappHref()}
+      ctaLabel={cta.label}
+    >
+      <Problema />
+      <Beneficios />
+      <Pasos />
+      <Precios />
+      <FAQ />
+      <CTAFinal />
+      <Footer />
+    </ScrollExpandMedia>
+  </main>
+  <WhatsAppFloat />
+</BaseLayout>

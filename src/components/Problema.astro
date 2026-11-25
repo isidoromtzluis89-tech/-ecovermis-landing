@@ -1,0 +1,14 @@
+---
+import { problema } from '../content';
+---
+
+<section class="section-pad bg-eco-light text-eco-ink" aria-labelledby="problema-title">
+  <div class="container-narrow max-w-3xl">
+    <h2 id="problema-title" class="heading-display mb-8 text-3xl text-eco-ink sm:text-4xl">
+      {problema.title}
+    </h2>
+    <div class="space-y-5 text-lg leading-relaxed text-eco-ink/80 sm:text-xl">
+      {problema.paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+  </div>
+</section>
